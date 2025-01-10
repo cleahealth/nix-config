@@ -10,4 +10,6 @@
     efiSupport = true;
     device = "nodev";
   };
+
+  services.qemuGuest.enable = true;
 }
