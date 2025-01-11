@@ -33,7 +33,7 @@
     # overrides (e.g. mkForce) from the user's configuration.
     # https://github.com/NixOS/nixpkgs/pull/164531
     # https://discourse.nixos.org/t/networkmanager-plugins-installed-by-default/39682
-    plugins = lib.mkOverride 99 [];
+    plugins = lib.mkOverride 99 [ ];
   };
 
   # Allow proprietary packages
