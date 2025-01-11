@@ -93,4 +93,9 @@
 
   # use ZSH as default shell for all users
   users.defaultUserShell = pkgs.zsh;
+
+  # enable zram as swap
+  # refer to RFC on Fedora for details:
+  # https://fedoraproject.org/wiki/Changes/SwapOnZRAM
+  zramSwap.enable = true;
 }
