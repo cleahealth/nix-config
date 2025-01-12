@@ -79,6 +79,9 @@
     syntaxHighlighting.enable = true;
   };
 
+  # BTRFS file maintenance
+  services.btrfs.autoScrub.enable = true;
+
   # enable SSH service for remote access
   services.openssh.enable = true;
 

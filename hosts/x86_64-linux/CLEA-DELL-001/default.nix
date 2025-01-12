@@ -3,7 +3,7 @@
 {
   imports = [
     inputs.disko.nixosModules.disko
-    ../../../profiles/x86_64-linux/base-desktop
+    ../../../profiles/x86_64-linux/devops-desktop
     ../../../systems/x86_64-linux/proxmox-vm
     ../../../users/admin
     ./disk-config.nix

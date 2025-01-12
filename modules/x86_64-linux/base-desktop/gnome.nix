@@ -7,12 +7,18 @@
     gnome-console
   ];
 
-  # include dock and menu as default
-  environment.systemPackages = with pkgs.gnomeExtensions; [
-    appindicator
-    arcmenu
-    dash-to-dock
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+      gnome-tweaks
+      wl-clipboard # command line clipboard tool
+    ]
+    # include dock and menu as default
+    ++ (with gnomeExtensions; [
+      appindicator
+      arcmenu
+      dash-to-dock
+    ]);
 
   # default GNOME settings
   programs.dconf = {
@@ -31,6 +37,13 @@
         };
       }
     ];
+  };
+
+  # theming for non GTK apps
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
   };
 
   # enable GNOME services

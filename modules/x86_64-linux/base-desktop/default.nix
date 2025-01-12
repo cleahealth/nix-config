@@ -5,6 +5,14 @@
     ./gnome.nix
   ];
 
+  # must-include packages for office/home usage enenvironment
+  environment.systemPackages = with pkgs; [
+    firefox # web browser
+    ghostty # terminal for command line access
+    trayscale # tailscale tray icon
+    vlc # video player
+  ];
+
   # font configuration, use Noto fonts as default
   fonts = {
     fontDir.enable = true;
@@ -25,23 +33,24 @@
     ];
   };
 
-  # chinese input method
-  i18n.inputMethod = {
-    enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      table
-      table-chinese
+  # locale configuration, add zh_HK locale for non-server systems
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    # chinese input method
+    inputMethod = {
+      enable = true;
+      type = "ibus";
+      ibus.engines = with pkgs.ibus-engines; [
+        table
+        table-chinese
+      ];
+    };
+    supportedLocales = [
+      "C.UTF-8/UTF-8"
+      "en_US.UTF-8/UTF-8"
+      "zh_HK.UTF-8/UTF-8"
     ];
   };
-
-  # must-include packages for office/home usage enenvironment
-  environment.systemPackages = with pkgs; [
-    firefox # web browser
-    ghostty # terminal for command line access
-    thunderbird # email client
-    vlc # video player
-  ];
 
   # additional rules for passwordless authorization to privileged operations
   security.polkit.extraConfig = ''
@@ -90,4 +99,7 @@
 
   # enable graphical services
   services.xserver.enable = true;
+
+  # set timezone for desktop
+  time.timeZone = "Asia/Hong_Kong";
 }
