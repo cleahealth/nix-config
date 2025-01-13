@@ -46,11 +46,17 @@
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
-    # Enable flakes by default
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    settings = {
+      # Enable flakes by default
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      # allow remote builds for admins
+      trusted-users = [
+        "@wheel"
+      ];
+    };
   };
 
   # for cloning configurations from git repository

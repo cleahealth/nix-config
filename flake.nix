@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    deploy-rs.url = "github:serokell/deploy-rs";
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +24,12 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      deploy-rs,
+      ...
+    }@inputs:
     {
       nixosConfigurations = {
         CLEA-DELL-001 = nixpkgs.lib.nixosSystem {
@@ -31,6 +38,17 @@
             ./hosts/x86_64-linux/CLEA-DELL-001
           ];
           specialArgs = { inherit inputs; };
+        };
+      };
+
+      deploy.nodes = {
+        CLEA-DELL-001 = {
+          hostname = "10.100.131.221";
+          profiles.system = {
+            sshUser = "admin";
+            interactiveSudo = true;
+            path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.CLEA-DELL-001;
+          };
         };
       };
 
