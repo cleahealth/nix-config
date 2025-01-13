@@ -46,6 +46,7 @@
           hostname = "10.100.131.221";
           profiles.system = {
             sshUser = "admin";
+            user = "root";
             interactiveSudo = true;
             path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.CLEA-DELL-001;
           };

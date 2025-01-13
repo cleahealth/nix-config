@@ -10,6 +10,7 @@
     consul
     consul-template
     ctop
+    deploy-rs # for deploying nixos configurations
     gnupg
     iperf # network speed testing
     minio-client
