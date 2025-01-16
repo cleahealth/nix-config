@@ -12,6 +12,7 @@
     clang-tools
     cmake
     ctop
+    gcc
     gdb
     gh # GitHub CLI
     gnumake
