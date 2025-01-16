@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     beekeeper-studio
+    google-chrome # extra chrome based browser for web development
     insomnia
     jetbrains-toolbox
     vscode
