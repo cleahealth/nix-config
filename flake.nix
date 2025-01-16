@@ -43,7 +43,7 @@
 
       deploy.nodes = {
         CLEA-DELL-001 = {
-          hostname = "10.100.131.221";
+          hostname = "clea-dell-001";
           profiles.system = {
             sshUser = "admin";
             user = "root";
