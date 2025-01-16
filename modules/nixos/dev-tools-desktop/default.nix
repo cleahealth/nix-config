@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     beekeeper-studio
+    discord # chat between developers, should be matrix instead but whatever
     google-chrome # extra chrome based browser for web development
     insomnia
     jetbrains-toolbox
