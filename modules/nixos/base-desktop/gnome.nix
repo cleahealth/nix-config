@@ -54,4 +54,11 @@
   # enable GNOME services
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
+
+  # Enable GNOME Remote Desktop
+  # https://github.com/NixOS/nixpkgs/issues/361163
+  systemd.services.gnome-remote-desktop = {
+    wantedBy = [ "graphical.target" ];
+  };
+
 }
