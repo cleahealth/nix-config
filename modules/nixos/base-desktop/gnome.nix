@@ -39,6 +39,11 @@
     ];
   };
 
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "ghostty";
+  };
+
   # theming for non GTK apps
   qt = {
     enable = true;
