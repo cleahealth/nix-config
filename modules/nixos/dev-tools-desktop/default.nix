@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+
+  environment.sessionVariables = {
+    PLAYWRIGHT_BROWSERS_PATH = "${pkgs.playwright-driver.browsers}";
+  };
+
   environment.systemPackages = with pkgs; [
     beekeeper-studio
     discord # chat between developers, should be matrix instead but whatever
