@@ -8,8 +8,8 @@
 
   environment.systemPackages = with pkgs; [
     age
-    ansible
-    ansible-lint
+#    ansible
+#    ansible-lint
     cloudflared
     ctop
     deploy-rs # for deploying nixos configurations

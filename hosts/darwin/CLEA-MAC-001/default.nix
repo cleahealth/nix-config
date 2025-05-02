@@ -5,7 +5,6 @@
   imports = [
     ../../../profiles/darwin/alltheway-desktop
     ../../../systems/macbook
-    inputs.home-manager.darwinModules.home-manager
   ];
 
   # packages used in workplace
