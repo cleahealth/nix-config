@@ -6,7 +6,6 @@
     ../../../profiles/nixos/devops-desktop
     ../../../systems/x86_64-linux/proxmox-vm
     ../../../users/admin
-    ../../../users/thomasli
     ./disk-config.nix
     ./hardware-configuration.nix
   ];
