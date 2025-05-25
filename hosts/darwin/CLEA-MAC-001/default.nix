@@ -41,6 +41,7 @@
 
   networking.hostName = "CLEA-MAC-001";
 
+  system.primaryUser = "thomasli";
   users.users.thomasli = {
     # weird behaviour home-manager does not pick up home directory from hm config
     home = /Users/thomasli;
