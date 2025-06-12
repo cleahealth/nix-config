@@ -20,7 +20,7 @@
     nodejs
     nodePackages.pnpm
     pipx
-    pre-commit
+    # pre-commit # unsupported in darwin due to julia-1.11.5 not being supported in darwin
     protobuf
     (python3.withPackages (
       pythonPkgs: with pythonPkgs; [
