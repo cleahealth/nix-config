@@ -2,11 +2,6 @@
 
 {
 
-  environment.systemPackages = with pkgs; [
-    vscode
-    zed-editor # text editor and IDE
-  ];
-
   fonts.packages = with pkgs; [
     # Extra monospace fonts
     fira
