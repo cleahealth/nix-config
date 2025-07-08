@@ -26,6 +26,7 @@
       "hashicorp/tap/vault"
       "ory/tap/hydra"
       "ory/tap/kratos"
+      "stripe-cli"
     ];
     casks = [
       "google-chrome"
