@@ -22,6 +22,7 @@
     pipx
     # pre-commit # unsupported in darwin due to julia-1.11.5 not being supported in darwin
     protobuf
+    protoc-gen-go
     (python3.withPackages (
       pythonPkgs: with pythonPkgs; [
         ipython

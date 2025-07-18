@@ -24,6 +24,8 @@
     nodePackages.pnpm
     pipx
     pre-commit
+    protobuf
+    protoc-gen-go
     (python3.withPackages (
       pythonPkgs: with pythonPkgs; [
         ipython
