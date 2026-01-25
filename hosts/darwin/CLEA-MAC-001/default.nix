@@ -23,6 +23,7 @@
       "hashicorp/tap/consul-template"
       "hashicorp/tap/nomad"
       "hashicorp/tap/packer"
+      "hashicorp/tap/terraform"
       "hashicorp/tap/vault"
       "ory/tap/hydra"
       "ory/tap/kratos"
