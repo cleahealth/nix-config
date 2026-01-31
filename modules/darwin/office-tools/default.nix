@@ -9,6 +9,7 @@
   homebrew = {
     casks = [
       "discord"
+      "element"
       "signal"
       "telegram"
       "zoom"
