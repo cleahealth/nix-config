@@ -95,7 +95,7 @@
   services.resolved = {
     enable = true;
     settings = {
-      MulticastDNS = "yes";
+      Resolve.MulticastDNS = "yes";
     };
   };
 
